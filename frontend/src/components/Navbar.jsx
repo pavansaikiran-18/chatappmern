@@ -1,7 +1,8 @@
 import React from 'react'
 
-export const Navbars = () => {
+ const Navbar = () => {
   return (
     <div>Navbars</div>
   )
 }
+export default Navbar

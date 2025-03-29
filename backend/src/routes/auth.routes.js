@@ -7,7 +7,7 @@ router
     .post("/signout", signout)
     .post("/login", login)
     .post("/update-profile", protectroute, updateprofile)
-    .get("/checkauth", protectroute, checkauth)
+    .get("/check", protectroute, checkauth)
 
 
 
