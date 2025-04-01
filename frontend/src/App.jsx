@@ -10,6 +10,7 @@ import Signup from "./pages/Signuppage";
 import useAuthstore from "./Store/useAuthstore";
 
 
+
 const App = () => {
   const { authUser, checkAuth,isCheckingAuth } = useAuthstore();
   
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/login" element={!authUser ? <Login />: <Navigate to="/" />} />
         <Route path="/settings" element={authUser ? <Settings />: <Navigate to="/login"/>} />
         <Route path="/profile" element={authUser ? <Profile />: <Navigate to="/login"/>} />
+        
         
       </Routes>
     </div>
