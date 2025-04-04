@@ -1,13 +1,13 @@
 import express from "express"
-import { signup, signout, login ,updateprofile,checkauth} from "../controller/auth.controller.js"
+import { signup, logout, login ,updateProfile,checkAuth} from "../controller/auth.controller.js"
 import {protectroute} from "../middleware/protectroute.middleware.js"
 const router = express.Router()
 router
     .post("/signup", signup)
-    .post("/signout", signout)
+    .post("/signout", logout)
     .post("/login", login)
-    .post("/update-profile", protectroute, updateprofile)
-    .get("/check", protectroute, checkauth)
+    .post("/update-profile", protectroute, updateProfile)
+    .get("/check", protectroute, checkAuth)
 
 
 
