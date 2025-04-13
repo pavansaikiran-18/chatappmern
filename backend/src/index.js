@@ -15,6 +15,7 @@ server.use(cors({
 }))
 server.use(express.json({ limit: '50mb' })); 
 
+
 server.use(cookieParser())
 server.use("/api/auth",authrouter)
 server.use("/api/messages",messagerouter)
