@@ -24,5 +24,5 @@ server.use("/api/messages",messagerouter)
 
 server.listen(process.env.port, () => {
     console.log("server started")
-    connectdb()
+    connectdb();
 })
