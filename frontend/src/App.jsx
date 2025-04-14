@@ -7,7 +7,7 @@ import Login from "./pages/Loginpage";
 import Profile from "./pages/Profilepage";
 import Settings from "./pages/Settingpage";
 import Signup from "./pages/Signuppage";
-import  {useAuthStore}  from "./Store/useAuthStore.js";
+import  useAuthStore  from "./Store/useAuthStore.js";
 import { Toaster } from "react-hot-toast";
 import { useThemeStore } from "./Store/useThemeStore.js";
 

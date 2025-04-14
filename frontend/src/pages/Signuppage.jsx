@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  {useAuthStore}  from "../Store/useAuthStore.js";
+import  useAuthStore  from "../Store/useAuthStore.js";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessagesSquare, User, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 

@@ -1,9 +1,9 @@
 import { create } from "zustand";
 import toast from "react-hot-toast";
 import axiosinst from "../lib/Axios";
-import { useAuthStore } from "./useAuthStore";
-
-export const useChatStore = create((set, get) => ({
+import  useAuthStore  from "./useAuthStore";
+import { use } from "react";
+const useChatStore = create((set, get) => ({
   messages: [],
   users: [],
   selectedUser: null,
@@ -66,3 +66,4 @@ export const useChatStore = create((set, get) => ({
 
   setSelectedUser: (selectedUser) => set({ selectedUser }),
 }));
+export default useChatStore;

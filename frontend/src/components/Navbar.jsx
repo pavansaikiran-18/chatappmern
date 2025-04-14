@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useAuthStore } from "../Store/useAuthStore.js";
+import  useAuthStore  from "../Store/useAuthStore";
 import { LogOut, MessageSquareCode, Settings, User } from "lucide-react";
 
 

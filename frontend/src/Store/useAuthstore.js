@@ -2,7 +2,7 @@
 import { create } from "zustand"
 import axiosinst from "../lib/Axios"
 import toast from "react-hot-toast"
-export const useAuthStore = create((set) => ({
+const useAuthStore = create((set) => ({
     authUser: null,
     isSignUp: false,
     isLogging: false,
@@ -82,3 +82,4 @@ export const useAuthStore = create((set) => ({
       }
     },
 }))
+export default useAuthStore;
