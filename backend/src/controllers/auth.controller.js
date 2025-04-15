@@ -1,7 +1,7 @@
-import tokengen from "../view/utiles.js";
-import User from "../model/user.model.js";
-import bcrypt from "bcrypt";
-import cloudinary from "../view/cloudinary.js";
+import { generateToken } from "../lib/utils.js";
+import User from "../models/user.model.js";
+import bcrypt from "bcryptjs";
+import cloudinary from "../lib/cloudinary.js";
 
 export const signup = async (req, res) => {
   const { fullName, email, password } = req.body;
@@ -29,7 +29,7 @@ export const signup = async (req, res) => {
 
     if (newUser) {
       // generate jwt token here
-      tokengen(newUser._id, res);
+      generateToken(newUser._id, res);
       await newUser.save();
 
       res.status(201).json({
@@ -51,6 +51,7 @@ export const login = async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email });
+    
 
     if (!user) {
       return res.status(400).json({ message: "Invalid credentials" });
@@ -61,7 +62,7 @@ export const login = async (req, res) => {
       return res.status(400).json({ message: "Invalid credentials" });
     }
 
-    tokengen(user._id, res);
+    generateToken(user._id, res);
 
     res.status(200).json({
       _id: user._id,
@@ -88,7 +89,6 @@ export const logout = (req, res) => {
 export const updateProfile = async (req, res) => {
   try {
     const { profilePic } = req.body;
-    console.log(profilePic)
     const userId = req.user._id;
 
     if (!profilePic) {

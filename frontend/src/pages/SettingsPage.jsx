@@ -1,10 +1,10 @@
 import { THEMES } from "../constants";
-import { useThemeStore } from "../Store/useThemeStore";
+import { useThemeStore } from "../store/useThemeStore";
 import { Send } from "lucide-react";
 
 const PREVIEW_MESSAGES = [
-  { id: 1, content: "Google Maps said it was my turn", isSent: false },
-  { id: 2, content: "Without some risk, you don’t have a story.", isSent: true },
+  { id: 1, content: "Hey! How's it going?", isSent: false },
+  { id: 2, content: "I'm doing great! Just working on some new features.", isSent: true },
 ];
 
 const SettingsPage = () => {
