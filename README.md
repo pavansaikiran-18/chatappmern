@@ -4,7 +4,7 @@ A full-stack web application built using the MERN stack with **real-time feature
 
 ## 🚀 Live Demo
 
-👉 [Click here to view the live app](https://friday-ennb.onrender.com/)
+👉 [Click here to view the live app](https://friday-ennb.onrender.com)
 
 ## 📂 Tech Stack
 
@@ -28,5 +28,5 @@ A full-stack web application built using the MERN stack with **real-time feature
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git https://github.com/pavansaikiran-18/chatappmern.git
+cd chatappmern
