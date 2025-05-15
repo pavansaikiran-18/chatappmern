@@ -1,10 +1,23 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
 
- const DeveloperPage = () => {
-    console.log("DeveloperPage");
+export default function DeveloperPage() {
+  const [showName, setShowName] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowName(true), 1000); // 1 second delay
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <>
-    
-    </>
-  ) }
-export default DeveloperPage;
+    <div className="h-screen flex items-center justify-center bg-black text-3xl font-semibold">
+      Hi, my name is{" "}
+      <span
+        className={`ml-2 transition-opacity duration-1000 ${
+          showName ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        Pavan
+      </span>
+    </div>
+  );
+}
