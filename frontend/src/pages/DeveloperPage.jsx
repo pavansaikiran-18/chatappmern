@@ -4,7 +4,7 @@ export default function DeveloperPage() {
   const [showName, setShowName] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowName(true), 1000); // 1 second delay
+    const timer = setTimeout(() => setShowName(true), 1000); 
     return () => clearTimeout(timer);
   }, []);
 
